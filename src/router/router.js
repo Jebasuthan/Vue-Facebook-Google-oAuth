@@ -35,7 +35,7 @@ const router = new Router({
   linkExactActiveClass: 'active',
   base: process.env.BASE_URL,
   routes: baseRoutes
-});
+})
 
 router.beforeEach((to, from, next) => {
   // redirect to login page if not logged in and trying to access a restricted page
@@ -46,7 +46,7 @@ router.beforeEach((to, from, next) => {
   if (authRequired && !loggedIn) {
     return next('/login')
   }
-  next();
+  next()
 })
 
 export default router

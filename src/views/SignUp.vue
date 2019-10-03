@@ -38,9 +38,9 @@
 <script>
 import SocialSignUp from '@/components/SocialLogin'
 export default {
-    name: 'signup',
-    components: {
-        SocialSignUp
-    }
+  name: 'signup',
+  components: {
+    SocialSignUp
+  }
 }
 </script>

@@ -11,12 +11,12 @@ import router from '@/router/router'
 import { removeItem } from '@/config/utils'
 
 export default {
-    name: 'signup_header',
-    methods: {
-        logout() {
-            removeItem('user')
-            router.push('/login')
-        }
+  name: 'signup_header',
+  methods: {
+    logout () {
+      removeItem('user')
+      router.push('/login')
     }
+  }
 }
 </script>

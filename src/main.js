@@ -5,7 +5,7 @@ import store from './store/store'
 
 import '@/assets/css/style.css'
 
-import GoogleAuth from '@/config/google.js'
+import GoogleAuth from '@/config/google_oAuth.js'
 const gauthOption = {
   clientId: '707231563844-e5cpkqrlt62gncmj6b84of5sml9lp8g9.apps.googleusercontent.com',
   scope: 'profile email',

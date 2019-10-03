@@ -43,6 +43,15 @@ npm install
 ```
 npm run serve
 ```
+# Login Screen
+
+<img width="565" alt="Login" src="https://user-images.githubusercontent.com/3702438/66127487-6d0a5a80-e609-11e9-86b5-034c5899765f.png">
+
+
+# SignUp Screen
+
+<img width="574" alt="SignUp" src="https://user-images.githubusercontent.com/3702438/66127630-c5d9f300-e609-11e9-991e-92a78f58140b.png">
+
 
 ### Compiles and minifies for production
 ```

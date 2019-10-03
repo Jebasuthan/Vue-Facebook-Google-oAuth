@@ -44,7 +44,7 @@ npm install
 npm run serve
 ```
 
-## [Demo Link](https://young-savannah-57214.herokuapp.com)
+## [Demo Link](https://young-savannah-57214.herokuapp.com/login)
 # Login Screen
 
 <img width="565" alt="Login" src="https://user-images.githubusercontent.com/3702438/66127487-6d0a5a80-e609-11e9-86b5-034c5899765f.png">

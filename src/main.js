@@ -4,6 +4,7 @@ import router from './router/router'
 import store from './store/store'
 
 import '@/assets/css/style.css'
+import './registerServiceWorker'
 
 import GoogleAuth from '@/config/google_oAuth.js'
 const gauthOption = {

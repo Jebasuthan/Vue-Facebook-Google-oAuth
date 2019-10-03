@@ -9,6 +9,10 @@ Vue.use(Router)
 
 let baseRoutes = [
   {
+    path: '/',
+    redirect: '/login'
+  },
+  {
     path: '/home',
     name: 'Home',
     component: Home

@@ -185,6 +185,11 @@ npm run serve
 
 <img width="574" alt="SignUp" src="https://user-images.githubusercontent.com/3702438/66127630-c5d9f300-e609-11e9-991e-92a78f58140b.png">
 
+# Facebook after SignUp/SignIn Screen
+<img width="1438" alt="Screenshot 2021-06-01 at 8 46 14 AM" src="https://user-images.githubusercontent.com/3702438/120262446-55401980-c2b7-11eb-9747-d1cdae6bea83.png">
+
+# Google after SignUp/SignIn Screen
+<img width="1437" alt="Screenshot 2021-06-01 at 8 46 31 AM" src="https://user-images.githubusercontent.com/3702438/120262460-5a04cd80-c2b7-11eb-8da5-9f7ef20d6656.png">
 
 ### Compiles and minifies for production
 ```

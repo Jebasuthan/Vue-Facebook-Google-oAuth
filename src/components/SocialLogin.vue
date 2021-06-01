@@ -29,11 +29,19 @@ export default {
           // on success do something
           console.log('GoogleUser', GoogleUser)
           console.log('getId', GoogleUser.getId())
+          console.log('basicprofile', GoogleUser.getBasicProfile().getName())
           console.log('getBasicProfile', GoogleUser.getBasicProfile())
           console.log('getAuthResponse', GoogleUser.getAuthResponse())
           var userInfo = {
             loginType: 'google',
-            google: GoogleUser
+            google: {
+              auth: GoogleUser.getAuthResponse(),
+              user: {
+                name: GoogleUser.getBasicProfile().getName(),
+                email: GoogleUser.getBasicProfile().getEmail(),
+                profileImage: GoogleUser.getBasicProfile().getImageUrl()
+              }
+            }
           }
           this.$store.commit('setLoginUser', userInfo)
           router.push('/home')
@@ -44,13 +52,30 @@ export default {
     },
     loginWithFacebook () {
       window.FB.login(response => {
-        var userInfo = {
-          loginType: 'fb',
-          fb: response
+        if (response && response.authResponse) {
+          console.log('response', response)
+          var userInfo = {
+            loginType: 'fb',
+            fb: {
+              auth: response.authResponse
+            }
+          }
+          this.$store.commit('setLoginUser', userInfo)
+          window.FB.api(`/${response.authResponse.userID}`, userResponse => {
+            if (userResponse) {
+              console.log(userResponse);
+              var userInfo = {
+                loginType: 'fb',
+                fb: {
+                  auth: response.authResponse,
+                  user: userResponse
+                }
+              }
+              this.$store.commit('setLoginUser', userInfo)
+            }
+          }, this.params);
+          router.push('/home')
         }
-        console.log('fb response', response)
-        this.$store.commit('setLoginUser', userInfo)
-        router.push('/home')
       }, this.params)
     }
   }

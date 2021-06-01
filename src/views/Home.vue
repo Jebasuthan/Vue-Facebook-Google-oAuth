@@ -6,11 +6,19 @@
         <h2 class="heading">Login Success!</h2>
         <div>
           <div v-if="this.$store.state.loginUser.loginType == 'fb'">
-            Facebook Access Token - {{this.$store.state.loginUser.fb.authResponse.accessToken}}
+            <div class="center">
+              <p>Welcome {{this.$store.state.loginUser.fb.user && this.$store.state.loginUser.fb.user.name}} !</p>
+              <!-- <img :src="this.$store.state.loginUser.fb.user.name" /> -->
+              <p><b>Facebook Access Token- </b>{{this.$store.state.loginUser.fb && this.$store.state.loginUser.fb.auth.accessToken}}</p>
+            </div>
           </div>
           <div v-else-if="this.$store.state.loginUser.loginType == 'google'">
-            Google Access Token - {{this.$store.state.loginUser.google.Zi.access_token}}
-            <p>Welcome {{this.$store.state.loginUser.google.w3.ig}} !</p>
+            <div class="center">
+              <p>Welcome {{this.$store.state.loginUser.google.user.name}} !</p>
+              <!-- <p>Email Address: {{this.$store.state.loginUser.google.user.email}} !</p> -->
+              <img :src="this.$store.state.loginUser.google.user.profileImage" />
+              <p><b>Google Access Token- </b>{{this.$store.state.loginUser.google.auth.access_token}}</p>
+            </div>
           </div>
         </div>
       </div>

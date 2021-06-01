@@ -76,17 +76,17 @@ var googleAuth = (function () {
       return new Promise((resolve, reject) => {
       if (!this.GoogleAuth) {
         if (typeof errorCallback === 'function') errorCallback(false)
-        reject(false)
+          reject(false)
         return
       }
       this.GoogleAuth.grantOfflineAccess({ prompt: this.prompt })
         .then(function (resp) {
         if (typeof successCallback === 'function') successCallback(resp.code)
-        resolve(resp.code)
+          resolve(resp.code)
         })
         .catch(function (error) {
         if (typeof errorCallback === 'function') errorCallback(error)
-        reject(error)
+          reject(error)
         })
       })
     }
@@ -95,18 +95,18 @@ var googleAuth = (function () {
       return new Promise((resolve, reject) => {
       if (!this.GoogleAuth) {
         if (typeof errorCallback === 'function') errorCallback(false)
-        reject(false)
+          reject(false)
         return
       }
       this.GoogleAuth.signOut()
         .then(() => {
         if (typeof successCallback === 'function') successCallback()
-        this.isAuthorized = false
-        resolve(true)
+          this.isAuthorized = false
+          resolve(true)
         })
         .catch(error => {
         if (typeof errorCallback === 'function') errorCallback(error)
-        reject(error)
+          reject(error)
         })
       })
     }
